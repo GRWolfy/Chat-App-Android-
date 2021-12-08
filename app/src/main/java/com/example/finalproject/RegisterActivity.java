@@ -7,7 +7,6 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -67,7 +66,7 @@ public class RegisterActivity extends AppCompatActivity {
                         assert  firebaseUser != null;
                         String userid = firebaseUser.getUid();
 
-                        reference = FirebaseDatabase.getInstance().getReference("Users").child(userid);
+                        reference = FirebaseDatabase.getInstance().getReference("User").child(userid);
 
                         HashMap<String, String> hashMap = new HashMap<>();
                         hashMap.put("id", userid);
