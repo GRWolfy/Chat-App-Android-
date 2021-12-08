@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.example.finalproject.Adapter.ViewPager_Adapter;
 import com.example.finalproject.Fragments.ChatsFragment;
 import com.example.finalproject.Fragments.UsersFragment;
 import com.example.finalproject.Models.User;

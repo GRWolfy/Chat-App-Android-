@@ -13,7 +13,7 @@ import android.view.ViewGroup;
 
 import com.example.finalproject.Models.User;
 import com.example.finalproject.R;
-import com.example.finalproject.User_Adapter;
+import com.example.finalproject.Adapter.User_Adapter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
