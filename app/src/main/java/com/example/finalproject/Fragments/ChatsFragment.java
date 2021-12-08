@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import com.example.finalproject.R;
 
 
-public class ChatsFragment extends Fragment {
+public class    ChatsFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

@@ -5,13 +5,16 @@
       <map>
         <entry key="..\:/Programming/Android/FinalProject/app/src/main/res/layout/activity_login.xml" value="0.25" />
         <entry key="..\:/Programming/Android/FinalProject/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Programming/Android/FinalProject/app/src/main/res/layout/activity_message.xml" value="0.22" />
         <entry key="..\:/Programming/Android/FinalProject/app/src/main/res/layout/activity_register.xml" value="0.25" />
         <entry key="..\:/Programming/Android/FinalProject/app/src/main/res/layout/activity_start.xml" value="0.25" />
         <entry key="..\:/Programming/Android/FinalProject/app/src/main/res/layout/activity_viewdata.xml" value="0.12182971014492754" />
         <entry key="..\:/Programming/Android/FinalProject/app/src/main/res/layout/bar_layout.xml" value="0.18059777102330293" />
         <entry key="..\:/Programming/Android/FinalProject/app/src/main/res/layout/fragment_chats.xml" value="0.1" />
+        <entry key="..\:/Programming/Android/FinalProject/app/src/main/res/layout/fragment_users.xml" value="0.1" />
         <entry key="..\:/Programming/Android/FinalProject/app/src/main/res/layout/layout_item.xml" value="0.33" />
         <entry key="..\:/Programming/Android/FinalProject/app/src/main/res/layout/layout_items.xml" value="0.5" />
+        <entry key="..\:/Programming/Android/FinalProject/app/src/main/res/layout/user_item.xml" value="0.22" />
         <entry key="..\:/Programming/Android/FinalProject/app/src/main/res/menu/option_menu.xml" value="0.25" />
       </map>
     </option>

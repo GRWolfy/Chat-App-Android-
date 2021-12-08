@@ -57,6 +57,10 @@ public class MainActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 User user = snapshot.getValue(User.class);
                 //assert user != null;
+                //There is a weird bug here where if I use a different account
+                //It would trigger an null pointer exception
+                //but if I use a new account
+                //it would not trigger the null pointer excecptiom.
                 username.setText(user.getUsername());
 
                 if(user.getImageURL().equals("default")){
