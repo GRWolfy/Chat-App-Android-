@@ -15,6 +15,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.rengwuxian.materialedittext.MaterialEditText;
 
 import java.util.HashMap;
+import java.util.Locale;
 import java.util.Objects;
 
 public class RegisterActivity extends AppCompatActivity {
@@ -72,6 +73,8 @@ public class RegisterActivity extends AppCompatActivity {
                         hashMap.put("id", userid);
                         hashMap.put("username", username);
                         hashMap.put("imageURL", "default");
+                        hashMap.put("status", "offline");
+                        hashMap.put("search", username.toLowerCase());
 
                         reference.setValue(hashMap).addOnCompleteListener(task1 -> {
                             if(task1.isSuccessful()){

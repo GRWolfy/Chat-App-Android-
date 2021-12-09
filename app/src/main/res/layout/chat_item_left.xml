@@ -20,4 +20,11 @@
         android:text="hello"
         android:padding="8dp"/>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtSeen"
+        android:layout_below="@id/show_message"
+        android:visibility="gone"/>
+
 </RelativeLayout>
