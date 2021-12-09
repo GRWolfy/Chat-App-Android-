@@ -23,9 +23,10 @@ import java.util.List;
 public class Message_Adapter extends RecyclerView.Adapter<ViewHolder_Chat> {
     public static final int  MSG_TYPE_LEFT = 0;
     public static final int  MSG_TYPE_RIGHT = 1;
-    private Context context;
-    private List<Chat> chats;
-    private String imageurl;
+    private final Context context;
+    private final List<Chat> chats;
+    private final String imageurl;
+    private String userid = FirebaseAuth.getInstance().getCurrentUser().toString();
 
     FirebaseUser firebaseUser;
 
@@ -38,15 +39,14 @@ public class Message_Adapter extends RecyclerView.Adapter<ViewHolder_Chat> {
     @NonNull
     @Override
     public ViewHolder_Chat onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view;
         if(viewType == MSG_TYPE_RIGHT){
-            View view = LayoutInflater.from(context).inflate(R.layout.chat_item_right, parent, false);
-            return new ViewHolder_Chat(view);
+            view = LayoutInflater.from(context).inflate(R.layout.chat_item_right, parent, false);
         }
         else{
-            View view = LayoutInflater.from(context).inflate(R.layout.chat_item_left, parent, false);
-            return new ViewHolder_Chat(view);
+            view = LayoutInflater.from(context).inflate(R.layout.chat_item_left, parent, false);
         }
-
+        return new ViewHolder_Chat(view);
     }
 
     @Override
@@ -67,7 +67,8 @@ public class Message_Adapter extends RecyclerView.Adapter<ViewHolder_Chat> {
         return chats.size();
     }
 
-    public int getItemView(int position){
+    @Override
+    public int getItemViewType(int position) {
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 
         if(chats.get(position).getSender().equals(firebaseUser.getUid())){

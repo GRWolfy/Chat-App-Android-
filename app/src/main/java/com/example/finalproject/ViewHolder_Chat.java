@@ -15,6 +15,5 @@ public class ViewHolder_Chat extends RecyclerView.ViewHolder {
 
         show_message = itemView.findViewById(R.id.show_message);
         profileimage = itemView.findViewById(R.id.profileimage);
-
     }
 }

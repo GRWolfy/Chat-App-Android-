@@ -48,7 +48,7 @@ public class UsersFragment extends Fragment {
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                users.clear();;
+                users.clear();
 
                 for(DataSnapshot dataSnapshot : snapshot.getChildren()){
                     User user = dataSnapshot.getValue(User.class);
@@ -58,7 +58,7 @@ public class UsersFragment extends Fragment {
                     }
                 }
 
-                adapter = new User_Adapter(getContext(), users);
+                adapter = new User_Adapter(getContext(), users, false);
                 recyclerView.setAdapter(adapter);
             }
 
