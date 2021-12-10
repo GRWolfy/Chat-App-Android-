@@ -1,5 +1,7 @@
 package com.example.finalproject;
 
+import static android.content.ContentValues.TAG;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -8,6 +10,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -77,7 +80,7 @@ public class MessageActivity extends AppCompatActivity {
         profileimage = findViewById(R.id.profileimage);
         username = findViewById(R.id.username);
         intent = getIntent();
-        String userid = intent.getStringExtra("userid");
+        final String userid = intent.getStringExtra("userid");
 
         btnSend.setOnClickListener(new View.OnClickListener() {
             @Override

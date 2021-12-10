@@ -26,7 +26,6 @@ public class Message_Adapter extends RecyclerView.Adapter<ViewHolder_Chat> {
     private final Context context;
     private final List<Chat> chats;
     private final String imageurl;
-    private String userid = FirebaseAuth.getInstance().getCurrentUser().toString();
 
     FirebaseUser firebaseUser;
 
@@ -60,9 +59,9 @@ public class Message_Adapter extends RecyclerView.Adapter<ViewHolder_Chat> {
         else{
             Glide.with(context).load(imageurl).into(holder.profileimage);
         }
-
+        
         if(position == chats.size() - 1 ){
-            if(chat.isSeen()){
+            if(chat.getSeen()){
                 holder.txtSeen.setText("Seen");
             }
             else{
